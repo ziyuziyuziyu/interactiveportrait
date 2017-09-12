@@ -1,0 +1,12 @@
+#added { 
+    background:white;
+    height: 1800px;
+    overflow:hidden;
+}
+
+#containerscroll{
+    display:block;
+    margin:auto;
+    vertical-align: top;
+    padding-top: 25%;
+}
