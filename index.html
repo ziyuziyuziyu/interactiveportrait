@@ -1,0 +1,64 @@
+<html>
+<head>
+
+<script>
+$(function(){
+    var 
+    Node = $('#containerscroll'),
+    BaseWidth = Node.width();
+    
+    $(window).resize(function() {
+       $('#containerscroll').css({
+          top: ($(window).height() -        $('#containerscroll').outerHeight()) / 1
+     });
+});
+    
+    // To initially run the function:
+    $(window).resize();
+    
+    
+    var $scrollingDiv = Node;
+    $(window).scroll(function() {
+        var winScrollTop = $(window).scrollTop() + 0,
+            zeroSizeHeight = $(document).height() - $(window).height(),
+            newSize = BaseWidth * ( 1 - (winScrollTop / zeroSizeHeight) * (999/1000) );
+        
+        Node.css({
+            width: newSize,
+            "marginTop": winScrollTop + "px"
+        });
+    });
+
+});
+
+
+</script>
+
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+<div id="added">
+<video id="containerscroll" autobuffer="" preload="preload" autoplay="" loop="" style="top: 343px; margin-top: 1055px;">
+<source src="https://files.persona.co/62884/hellobye.mp4" type="video/mp4">
+
+</video>
+    
+</div>
+
+
+</body>
+
+
+
+
+</html>
